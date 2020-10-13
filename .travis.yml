@@ -4,7 +4,7 @@ rvm:
  - jruby
 #install: sleep 15
 install: dir
-install: pwd
+#install: pwd
 #install: Dir.entries('.')
 # just checking
 jobs:
