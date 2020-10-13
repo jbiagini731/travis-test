@@ -2,9 +2,9 @@ language: ruby
 rvm:
  - 2.2
  - jruby
-install: sleep 15
+#install: sleep 15
 install: Dir.pwd
-install: Dir.entries('.')
+#install: Dir.entries('.')
 # just checking
 jobs:
   include:
