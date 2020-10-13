@@ -1,19 +1,8 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
-#install: sleep 15
-install: dir
-#install: pwd
-#install: Dir.entries('.')
-# just checking
-jobs:
-  include:
-    - stage: "Tests"                # naming the Tests stage
-      name: "Unit Tests"            # names the first Tests stage job
-      script: ./unit-tests
-    - script: ./integration-tests
-      name: "Integration Tests"     # names the second Tests stage job
-    - stage: deploy
-      name: "Deploy to GCP"
-      script: ./deploy
+language: python
+python:
+  - "2.7"
+cache: pip
+install:
+  - pip install -r requirements.txt
+script:
+  - python tests.py
