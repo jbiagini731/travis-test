@@ -3,5 +3,4 @@
 import sys
 
 print('test text')
-
-sys.stdout.write('PID: ' + str(sys.argv[1]))
+print('PID: ' + str(sys.argv[1]))
