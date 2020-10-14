@@ -14,7 +14,7 @@ while tries < 5:
   try:
     s3.Object(test_bucket, test_file).load()
   except botocore.exceptions.ClientError as e:
-    print('Try number: ' + tries)
+    print('Try number: ' + str(tries))
     if e.response['Error']['Code'] == "404":
       print('Object does not exist, yet...')
       tries+=1
