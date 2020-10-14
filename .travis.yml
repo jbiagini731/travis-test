@@ -5,7 +5,7 @@ cache: pip
 install:
   - pip install -r requirements.txt
 script:
-   - python tests.py
    - travis-wait-improved --timeout 2m sleep 121
-   - $pid_var =  $!
+   - pid_var =  $!
    - echo $pid_var
+   - python tests.py $pid_var
