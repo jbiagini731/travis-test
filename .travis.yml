@@ -7,8 +7,7 @@ install:
 before_deploy:
   - pip install travis-wait-improved
 deploy:
-  - provider: script
-    script: 
-      - python tests.py
-      - travis-wait-improved --timeout 5m echo "test"
-      - echo $!
+    - script: 
+       - python tests.py
+       - travis-wait-improved --timeout 5m echo "test"
+       - echo $!
