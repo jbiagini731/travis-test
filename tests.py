@@ -7,7 +7,7 @@ import time
 s3 = boto3.resource('s3')
 test_bucket = 'arcadia-desktop-automation-resources-repo'
 test_file   = 'test_file.txt'
-tries = 0
+tries = 1
 results_file = False
 while tries < 3 and not results_file:
   try:
@@ -19,6 +19,8 @@ while tries < 3 and not results_file:
     tries+=1
     time.sleep(10)
 
-if not results_file:
+if results_file:
+  print('The results file was found.)
+else:
   print('The results file was not found.')
   exit(1)
