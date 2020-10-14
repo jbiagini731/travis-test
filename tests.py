@@ -17,6 +17,3 @@ while tries < 5:
     print('Try number: ' + str(tries))
     tries+=1
     time.sleep(10)
-    else:
-      print('An unforseen issue has occurred')
-      exit(1)
