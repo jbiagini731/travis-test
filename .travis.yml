@@ -5,7 +5,4 @@ cache: pip
 install:
   - pip install -r requirements.txt
 script:
-   - sleep 121 &
-   - pid_var=$!
-   - echo $pid_var
-   - python tests.py 0
+   - python tests.py
