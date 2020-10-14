@@ -5,4 +5,4 @@ cache: pip
 install:
   - pip install -r requirements.txt
 script:
-   - python tests.py 0.1
+   - python tests.py --max_duration_in_hours=0.1
