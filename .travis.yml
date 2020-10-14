@@ -7,4 +7,3 @@ install:
 script:
   - python tests.py
   - travis-wait-improved --timeout 5m echo "test"
-  - echo $!
