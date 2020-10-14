@@ -20,7 +20,7 @@ while tries < 3 and not results_file:
     time.sleep(10)
 
 if results_file:
-  print('The results file was found.)
+  print('The results file was found.')
 else:
   print('The results file was not found.')
   exit(1)
