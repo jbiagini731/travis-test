@@ -20,7 +20,7 @@ results_file = False
 s3           = boto3.resource('s3')
 test_bucket  = 'arcadia-desktop-automation-resources-repo'
 test_file    = 'test_file.txt'
-tries        = 1
+tries        = 0
 sleep_time   = int(Decimal(args.max_duration_in_hours) * 1800)
 
 print('Max attempts: %s' % max_attempts)
@@ -35,7 +35,7 @@ while tries < max_attempts and not results_file:
     results_file = True
   except Exception as e:
     print('Exception:' + str(e))
-    print('Try number: ' + str(tries))
+    print('Try number: %s' % (tries + 1))
     tries+=1
     time.sleep(sleep_time)
 
