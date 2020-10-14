@@ -20,4 +20,5 @@ while tries < 3 and not results_file:
     time.sleep(10)
 
 if not results_file:
+  print('The results file was not found.')
   exit(1)
