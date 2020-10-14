@@ -5,4 +5,4 @@ cache: pip
 install:
   - pip install -r requirements.txt
 script:
-   - python tests.py --max_duration_in_hours=0.1
+   - travis-wait-improved --timeout 120m python tests.py --max_duration_in_hours=0.1
