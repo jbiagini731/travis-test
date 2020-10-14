@@ -6,5 +6,6 @@ install:
   - pip install -r requirements.txt
 script:
    - python tests.py
-   - travis-wait-improved --timeout 5m echo "test"
-   - echo $!
+   - travis-wait-improved --timeout 2m sleep 121
+   - $pid_var =  $!
+   - echo $pid_var
