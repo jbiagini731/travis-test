@@ -6,5 +6,5 @@ install:
   - pip install -r requirements.txt
 script:
   - python tests.py
-  - travis-wait-improved --timeout 5m sleep 15
+  - travis-wait-improved --timeout 5m echo "test"
   - echo $!
