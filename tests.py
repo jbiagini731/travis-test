@@ -2,4 +2,4 @@
 
 import sys
 
-print('PID: ' + str(sys.argv[1]))
+sys.stdout.write('PID: ' + str(sys.argv[1]))
