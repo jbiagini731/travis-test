@@ -18,6 +18,7 @@ while tries < 5:
     if e.response['Error']['Code'] == "404":
       print('Object does not exist, yet...')
       tries+=1
+      time.sleep(10)
     else:
       print('An unforseen issue has occurred')
       exit(1)
